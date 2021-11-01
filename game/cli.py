@@ -1,3 +1,4 @@
+from random import randint
 from typing import Tuple
 
 from logic import init_field, is_empty_ceil, set_ceil, is_win, is_available_ceil
@@ -40,6 +41,33 @@ def single_to_double_coord(coord: int, size: int) -> Tuple[int, int]:
     return row_index, col_index
 
 
+def first_player_step(field, player_symbol):
+    x, y = get_step(field, player_symbol)
+    set_ceil(field, x, y, player_symbol)
+    print_field(field)
+
+
+def second_player_step(field, player_symbol):
+    first_player_step(field, player_symbol)
+    # size = 3
+    # print("Ходит компьютер ...")
+    # while True:
+    #     random_ceil_index = randint(1, size * size)
+    #     x, y = single_to_double_coord(random_ceil_index, size)
+    #     if is_empty_ceil(field, x, y):
+    #         set_ceil(field, x, y, player_symbol)
+    #         break
+    # print_field(field)
+
+
+def is_win_cli(field, player_symbol) -> bool:
+    if is_win(field):
+        print(f"Выиграл игрок {player_symbol}!!!")
+        return True
+
+    return False
+
+
 def main():
     field = init_field()
     print_field(field)
@@ -47,32 +75,23 @@ def main():
     first_player, second_player = "X", "O"
 
     while True:
-        x, y = get_step(field, first_player)
-        set_ceil(field, x, y, first_player)
-        print_field(field)
+        first_player_step(field, first_player)
 
-        if is_win(field):
-            print(f"Выиграл игрок {first_player}")
+        if is_win_cli(field, first_player):
             break
 
         if not is_available_ceil(field):
             print("Ходы закончились. Ничья")
             break
 
-        x, y = get_step(field, second_player)
-        set_ceil(field, x, y, second_player)
-        print_field(field)
+        second_player_step(field, second_player)
 
-        if is_win(field):
-            print(f"Выиграл игрок {second_player}")
+        if is_win_cli(field, second_player):
             break
 
         if not is_available_ceil(field):
             print("Ходы закончились. Ничья")
             break
-
-
-
 
 
 if __name__ == '__main__':
