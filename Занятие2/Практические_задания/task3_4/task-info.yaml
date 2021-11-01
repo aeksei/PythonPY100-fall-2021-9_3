@@ -1,0 +1,74 @@
+type: theory
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 8
+    length: 83
+    placeholder_text: '...  # TODO запросить месяц у пользователя. Номер месяца -
+      целочисленное значение!'
+    initial_state:
+      length: 82
+      offset: 8
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: int(input())
+  - offset: 106
+    length: 7
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 105
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 3, 4, 5
+  - offset: 149
+    length: 11
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 145
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 6, 7, 8
+  - offset: 194
+    length: 11
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 184
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 9, 10, 11
+  - offset: 240
+    length: 10
+    placeholder_text: '...'
+    initial_state:
+      length: 3
+      offset: 224
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 12, 1, 2
+  text: |
+    mount = ...  # TODO запросить месяц у пользователя. Номер месяца - целочисленное значение!
+
+    if mount in [...]:
+        print("Весна")
+    elif mount in [...]:
+        print("Лето")
+    elif mount in [...]:
+        print("Осень")
+    elif mount in [...]:
+        print("Зима")
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+status: Solved
+record: -1
+post_submission_on_open: true

@@ -1,0 +1,59 @@
+type: output
+files:
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  learner_created: false
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 576
+    length: 38
+    placeholder_text: '# TODO распечатать фамилии и их номера'
+    initial_state:
+      length: 38
+      offset: 576
+    initialized_from_dependency: false
+    selected: false
+    status: Failed
+    encrypted_possible_answer: '# TODO'
+  text: |
+    if __name__ == "__main__":
+        surname_list = [  # список фамилий Санкт-Петербурга
+            "Иванов",
+            "Васильев",
+            "Петров",
+            "Смирнов",
+            "Михайлов",
+            "Фёдоров",
+            "Соколов",
+            "Яковлев",
+            "Попов",
+            "Андреев",
+            "Алексеев",
+            "Александров",
+            "Лебедев",
+            "Григорьев",
+            "Степанов",
+            "Семёнов",
+            "Павлов",
+            "Богданов",
+            "Николаев",
+            "Дмитриев",
+            "Егоров",
+            "Волков",
+            "Кузнецов",
+            "Никитин",
+            "Соловьёв"
+        ]
+
+        # TODO распечатать фамилии и их номера
+  learner_created: false
+status: Failed
+feedback:
+  message: Incorrect
+  time: Sat, 16 Oct 2021 08:53:47 UTC
+  actual: <no output>
+record: -1
